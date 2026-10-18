@@ -1,5 +1,6 @@
 package com.awaikoi.tutorialmod;
 
+import com.awaikoi.tutorialmod.block.ModBlocks;
 import com.awaikoi.tutorialmod.creativemodtab.ModCreativeModeTabs;
 import com.awaikoi.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
@@ -50,6 +51,7 @@ public class TutorialMod {
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
 
@@ -66,10 +68,17 @@ public class TutorialMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.AZURITE);
-            event.accept(ModItems.RAW_AZURITE);
-        }
+//        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+//            event.accept(ModItems.AZURITE);
+//            event.accept(ModItems.RAW_AZURITE);
+//        }
+//
+//        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+//            event.accept(ModBlocks.AZURITE_BLOCK);
+//            event.accept(ModBlocks.AZURITE_ORE);
+//            event.accept(ModBlocks.AZURITE_DEEPSLATE_ORE);
+//            event.accept(ModBlocks.RAW_AZURITE_BLOCK);
+//        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

@@ -1,6 +1,7 @@
 package com.awaikoi.tutorialmod.creativemodtab;
 
 import com.awaikoi.tutorialmod.TutorialMod;
+import com.awaikoi.tutorialmod.block.ModBlocks;
 import com.awaikoi.tutorialmod.item.ModItems;
 import com.mojang.authlib.yggdrasil.TextureUrlChecker;
 import net.minecraft.core.registries.Registries;
@@ -26,14 +27,22 @@ public class ModCreativeModeTabs {
                     .withTabsAfter(Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "azurite_blocks_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.AZURITE.get());
+                        output.accept(ModItems.RAW_AZURITE.get());
+
+
                     }).build());
 
     public static final Supplier<CreativeModeTab> AZURITE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("azurite_blocks_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModItems.RAW_AZURITE.get()))
+                    .icon(() -> new ItemStack(ModBlocks.AZURITE_BLOCK.get()))
                     .title(Component.translatable("creativetab.tutorialmod.azurite_block"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.RAW_AZURITE.get());
+                        output.accept(ModBlocks.AZURITE_BLOCK.get());
+                        output.accept(ModBlocks.RAW_AZURITE_BLOCK.get());
+                        output.accept(ModBlocks.AZURITE_ORE.get());
+                        output.accept(ModBlocks.AZURITE_DEEPSLATE_ORE.get());
+
+
                     }).build());
 
     public static void register(IEventBus eventBus) {
