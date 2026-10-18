@@ -1,5 +1,6 @@
 package com.awaikoi.tutorialmod;
 
+import com.awaikoi.tutorialmod.creativemodtab.ModCreativeModeTabs;
 import com.awaikoi.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -45,6 +46,8 @@ public class TutorialMod {
     public TutorialMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
 
