@@ -3,6 +3,7 @@ package com.awaikoi.tutorialmod;
 import com.awaikoi.tutorialmod.datagen.ModBlockLootTableProvider;
 import com.awaikoi.tutorialmod.datagen.ModBlockTagsProvider;
 import com.awaikoi.tutorialmod.datagen.ModModelProvider;
+import com.awaikoi.tutorialmod.datagen.ModRecipeProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
@@ -25,5 +26,7 @@ public class TutorialModDataGen {
         generator.addProvider(true, new ModModelProvider(packOutput));
         generator.addProvider(true, new ModBlockTagsProvider(packOutput, lookupProvider));
         generator.addProvider(true, new LootTableProvider(packOutput, Collections.emptySet(), List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
+
+        generator.addProvider(true, new ModRecipeProvider.Runner(packOutput, lookupProvider));
     }
 }
