@@ -3,6 +3,9 @@
   "block.tutorialmod.example_block": "Example Block",
   "item.tutorialmod.example_item": "Example Item",
 
+  "item.tutorialmod.metal_detector": "Metal Detector",
+  "item.tutorialmod.metal_detector.no_valuables": "No Valuables Found!",
+
   "tutorialmod.configuration.title": "Tutorial Mod Configs",
   "tutorialmod.configuration.section.tutorialmod.common.toml": "Tutorial Mod Configs",
   "tutorialmod.configuration.section.tutorialmod.common.toml.title": "Tutorial Mod Configs",

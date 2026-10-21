@@ -1,6 +1,7 @@
 package com.awaikoi.tutorialmod.item;
 
 import com.awaikoi.tutorialmod.TutorialMod;
+import com.awaikoi.tutorialmod.item.custom.MetalDetectorItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -11,6 +12,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> AZURITE = ITEMS.registerSimpleItem("azurite");
     public static final DeferredItem<Item> RAW_AZURITE = ITEMS.registerSimpleItem("raw_azurite");
+
+    public static final DeferredItem<Item> METAL_DECETOR = ITEMS.registerItem("metal_detector",
+            properties ->  new MetalDetectorItem(properties.durability(64)));
 
 
     public static void register(IEventBus eventBus) {

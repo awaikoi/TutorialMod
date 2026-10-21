@@ -28,6 +28,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.AZURITE.get());
                         output.accept(ModItems.RAW_AZURITE.get());
+                        output.accept(ModItems.METAL_DECETOR.get());
 
 
                     }).build());
