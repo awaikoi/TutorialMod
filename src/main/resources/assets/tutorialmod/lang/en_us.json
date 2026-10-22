@@ -30,5 +30,11 @@
   "item.tutorialmod.end_fire_starter": "End Fire Starter",
 
   "creativetab.tutorialmod.azurite_items": "Azurite Tutorial Items",
-  "creativetab.tutorialmod.azurite_block": "Azurite Tutorial Blocks"
+  "creativetab.tutorialmod.azurite_block": "Azurite Tutorial Blocks",
+  "tooltip.tutorialmod.onion.tooltip": "Tastes like an Onion..",
+  "tooltip.tutorialmod.magic_block.tooltip": "It's quite §9MAGICAL§r",
+  "tooltip.tutorialmod.metal_detector.shift_down": "Discover valuables by clicking on Blocks",
+  "tooltip.tutorialmod.metal_detector": "Press §eShift§r for more Information",
+  "block.tutorialmod.azurite_stairs": "Azurite Stairs",
+  "block.tutorialmod.azurite_slab": "Azurite Slab"
 }

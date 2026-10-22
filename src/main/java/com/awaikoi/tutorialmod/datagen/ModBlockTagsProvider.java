@@ -2,6 +2,7 @@ package com.awaikoi.tutorialmod.datagen;
 
 import com.awaikoi.tutorialmod.TutorialMod;
 import com.awaikoi.tutorialmod.block.ModBlocks;
+import com.awaikoi.tutorialmod.tags.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -23,11 +24,16 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.RAW_AZURITE_BLOCK.get())
                 .add(ModBlocks.AZURITE_ORE.get())
                 .add(ModBlocks.AZURITE_DEEPSLATE_ORE.get())
-                .add(ModBlocks.MAGIC_BLOCK.get());
+                .add(ModBlocks.MAGIC_BLOCK.get())
+                .add(ModBlocks.AZURITE_STAIRS.get())
+                .add(ModBlocks.AZURITE_SLAB.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.AZURITE_DEEPSLATE_ORE.get());
         tag(Tags.Blocks.NEEDS_WOOD_TOOL)
                 .add(ModBlocks.AZURITE_ORE.get());
+
+        tag(ModTags.Blocks.METAL_DETECTABLES)
+                .addTag(Tags.Blocks.ORES);
     }
 }

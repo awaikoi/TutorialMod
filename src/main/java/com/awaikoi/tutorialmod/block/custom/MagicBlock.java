@@ -1,6 +1,7 @@
 package com.awaikoi.tutorialmod.block.custom;
 
 import com.awaikoi.tutorialmod.item.ModItems;
+import com.awaikoi.tutorialmod.tags.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
@@ -50,6 +51,6 @@ public class MagicBlock extends Block {
     }
 
     private boolean isValidItem(ItemStack item) {
-        return item.is(Items.IRON_INGOT) || item.is(ModItems.AZURITE) || item.is(Items.REDSTONE);
+        return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 }

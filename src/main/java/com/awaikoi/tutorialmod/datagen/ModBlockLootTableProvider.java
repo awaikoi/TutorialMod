@@ -32,7 +32,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.AZURITE_BLOCK.get());
         dropSelf(ModBlocks.RAW_AZURITE_BLOCK.get());
 
+        dropSelf(ModBlocks.AZURITE_STAIRS.get());
+
         dropSelf(ModBlocks.MAGIC_BLOCK.get());
+
+        add(ModBlocks.AZURITE_SLAB.get(), this::createSlabItemTable);
 
         add(ModBlocks.AZURITE_ORE.get(),
                 createOreDrop(ModBlocks.AZURITE_ORE.get(), ModItems.RAW_AZURITE.get()));
