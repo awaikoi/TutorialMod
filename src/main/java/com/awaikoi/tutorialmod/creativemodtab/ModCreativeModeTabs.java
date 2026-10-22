@@ -30,6 +30,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RAW_AZURITE);
                         output.accept(ModItems.METAL_DECETOR);
                         output.accept(ModItems.ONION);
+                        output.accept(ModItems.END_FIRE_STARTER);
 
 
                     }).build());
