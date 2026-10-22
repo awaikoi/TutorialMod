@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
@@ -61,6 +62,24 @@ public class ModBlocks {
     public static final DeferredBlock<Block> AZURITE_BUTTON = registerBlock("azurite_button",
             properties -> new ButtonBlock(BlockSetType.IRON, 20, properties
                     .noCollision().strength(0.5F).pushReaction(PushReaction.DESTROY)));
+
+    public static final DeferredBlock<Block> AZURITE_FENCE = registerBlock("azurite_fence",
+            properties -> new FenceBlock(properties.strength(2f)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> AZURITE_FENCE_GATE = registerBlock("azurite_fence_gate",
+            properties -> new FenceGateBlock(WoodType.ACACIA, properties.strength(2f)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+    public static final DeferredBlock<Block> AZURITE_WALL = registerBlock("azurite_wall",
+            properties -> new WallBlock(properties.strength(2f)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> AZURITE_DOOR = registerBlock("azurite_door",
+            properties -> new DoorBlock(BlockSetType.IRON, properties.strength(2f)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST).noOcclusion()));
+    public static final DeferredBlock<Block> AZURITE_TRAPDOOR = registerBlock("azurite_trapdoor",
+            properties -> new TrapDoorBlock(BlockSetType.IRON, properties.strength(2f)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST).noOcclusion()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function, Component... components) {
         DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);

@@ -3,6 +3,7 @@ package com.awaikoi.tutorialmod.datagen;
 import com.awaikoi.tutorialmod.TutorialMod;
 import com.awaikoi.tutorialmod.block.ModBlocks;
 import com.awaikoi.tutorialmod.tags.ModTags;
+import com.jcraft.jorbis.Block;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -45,5 +46,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.AZURITE_PRESSURE_PLATE.get());
         tag(BlockTags.BUTTONS)
                 .add(ModBlocks.AZURITE_BUTTON.get());
+
+        tag(BlockTags.FENCES).add(ModBlocks.AZURITE_FENCE.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.AZURITE_FENCE_GATE.get());
+        tag(BlockTags.WALLS).add(ModBlocks.AZURITE_WALL.get());
+        tag(BlockTags.DOORS).add(ModBlocks.AZURITE_DOOR.get());
+        tag(BlockTags.TRAPDOORS).add(ModBlocks.AZURITE_TRAPDOOR.get());
     }
 }

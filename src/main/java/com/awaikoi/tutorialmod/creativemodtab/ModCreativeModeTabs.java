@@ -50,6 +50,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.AZURITE_BUTTON);
                         output.accept(ModBlocks.AZURITE_PRESSURE_PLATE);
 
+                        output.accept(ModBlocks.AZURITE_FENCE);
+                        output.accept(ModBlocks.AZURITE_FENCE_GATE);
+                        output.accept(ModBlocks.AZURITE_WALL);
+
+                        output.accept(ModBlocks.AZURITE_DOOR);
+                        output.accept(ModBlocks.AZURITE_TRAPDOOR);
+
                         output.accept(ModBlocks.MAGIC_BLOCK);
 
 
