@@ -12,6 +12,10 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -46,10 +50,17 @@ public class ModBlocks {
             properties -> new StairBlock(ModBlocks.AZURITE_BLOCK.get().defaultBlockState(),
                     properties.strength(2f)
                     .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
-
     public static final DeferredBlock<Block> AZURITE_SLAB = registerBlock("azurite_slab",
             properties -> new SlabBlock(properties.strength(2f)
                     .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> AZURITE_PRESSURE_PLATE = registerBlock("azurite_pressure_plate",
+            properties -> new PressurePlateBlock(BlockSetType.IRON, properties
+                    .mapColor(MapColor.COLOR_BLUE).forceSolidOn().instrument(NoteBlockInstrument.BASS)
+                    .noCollision().strength(0.5F).pushReaction(PushReaction.DESTROY)));
+    public static final DeferredBlock<Block> AZURITE_BUTTON = registerBlock("azurite_button",
+            properties -> new ButtonBlock(BlockSetType.IRON, 20, properties
+                    .noCollision().strength(0.5F).pushReaction(PushReaction.DESTROY)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function, Component... components) {
         DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);
