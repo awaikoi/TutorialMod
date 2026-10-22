@@ -1,6 +1,7 @@
 package com.awaikoi.tutorialmod.block;
 
 import com.awaikoi.tutorialmod.TutorialMod;
+import com.awaikoi.tutorialmod.block.custom.MagicBlock;
 import com.awaikoi.tutorialmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -33,6 +34,10 @@ public class ModBlocks {
             properties -> new DropExperienceBlock(UniformInt.of(3, 5), properties.strength(5f)
                     .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
+
+    public static final DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block",
+            properties -> new MagicBlock(properties.strength(4f)
+                    .requiresCorrectToolForDrops().sound(SoundType.DECORATED_POT)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
         DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);

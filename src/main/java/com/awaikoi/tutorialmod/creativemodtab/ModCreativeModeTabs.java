@@ -26,9 +26,9 @@ public class ModCreativeModeTabs {
                     .withTabsBefore(CreativeModeTabs.INGREDIENTS)
                     .withTabsAfter(Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "azurite_blocks_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.AZURITE.get());
-                        output.accept(ModItems.RAW_AZURITE.get());
-                        output.accept(ModItems.METAL_DECETOR.get());
+                        output.accept(ModItems.AZURITE);
+                        output.accept(ModItems.RAW_AZURITE);
+                        output.accept(ModItems.METAL_DECETOR);
 
 
                     }).build());
@@ -38,10 +38,12 @@ public class ModCreativeModeTabs {
                     .icon(() -> new ItemStack(ModBlocks.AZURITE_BLOCK.get()))
                     .title(Component.translatable("creativetab.tutorialmod.azurite_block"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModBlocks.AZURITE_BLOCK.get());
-                        output.accept(ModBlocks.RAW_AZURITE_BLOCK.get());
-                        output.accept(ModBlocks.AZURITE_ORE.get());
-                        output.accept(ModBlocks.AZURITE_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.AZURITE_BLOCK);
+                        output.accept(ModBlocks.RAW_AZURITE_BLOCK);
+                        output.accept(ModBlocks.AZURITE_ORE);
+                        output.accept(ModBlocks.AZURITE_DEEPSLATE_ORE);
+
+                        output.accept(ModBlocks.MAGIC_BLOCK);
 
 
                     }).build());

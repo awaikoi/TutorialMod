@@ -14,8 +14,6 @@
   "tutorialmod.configuration.magicNumberIntroduction": "Magic Number Text",
   "tutorialmod.configuration.magicNumber": "Magic Number",
 
-
-
   "item.tutorialmod.azurite": "Azurite",
   "item.tutorialmod.raw_azurite": "Raw Azurite",
 
@@ -25,7 +23,7 @@
   "block.tutorialmod.azurite_ore": "Azurite Ore",
   "block.tutorialmod.azurite_deepslate_ore": "Azurite Deepslate Ore",
 
-
+  "block.tutorialmod.magic_block": "Magic Block",
 
   "creativetab.tutorialmod.azurite_items": "Azurite Tutorial Items",
   "creativetab.tutorialmod.azurite_block": "Azurite Tutorial Blocks"
